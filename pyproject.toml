@@ -1,0 +1,29 @@
+[project]
+name = "clr-artifact"
+version = "1.0.0"
+description = "Library for investigating Clear Linux build and release artifacts"
+readme = "README.md"
+requires-python = ">=3.13"
+
+license = {file = "LICENSE"}
+
+authors = [
+  {name = "William Douglas", email = "william.douglas@intel.com" }
+]
+
+maintainers = [
+  {name = "William Douglas", email = "william.douglas@intel.com" }
+]
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: GPL version 3",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/clearlinux/clr-artifact"
+"Bug Reports" = "https://github.com/clearlinux/clr-artifact/issues"
+"Source" = "https://github.com/clearlinux/clr-artifact/"
