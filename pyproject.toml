@@ -1,6 +1,6 @@
 [project]
 name = "clr-artifact"
-version = "1.0.0"
+version = "1.0.1"
 description = "Library for investigating Clear Linux build and release artifacts"
 readme = "README.md"
 requires-python = ">=3.13"
