@@ -266,8 +266,8 @@ class ClearRepo():
         srpm = self._get_srpm_in_source_db(name)
         query = 'select provides.name from provides join packages' \
             ' on provides.pkgKey = packages.pkgKey' \
-            ' where packages.rpm_sourcerpm = ?', (srpm,)
-        res = self.dbs['bin-primary'].cursor.execute(query)
+            ' where packages.rpm_sourcerpm = ?'
+        res = self.dbs['bin-primary'].cursor.execute(query, (srpm,))
         provides = []
         for i in res:
             provides += i
@@ -291,7 +291,7 @@ class ClearRepo():
 
     def get_pkg_buildreqs(self, pkg):
         key = self._get_pkg_key_from_name(pkg)
-        res = self['src-primary'].cursor.execute('select name from requires where pkgKey = ?', (key,))
+        res = self.dbs['src-primary'].cursor.execute('select name from requires where pkgKey = ?', (key,))
         reqs = set()
         for i in res:
             reqs.add(i[0])
